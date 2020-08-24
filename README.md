@@ -7,9 +7,13 @@ Simple minimalistic web app with voice transcription feature to validate Sudoku
 >>>> USING VOICE TRANSCRIPTION
 
 1.Turn on the mic.
+
 2.Allow permission for mic to be used.
+
 3.when you see the splash effect around the mic button, Read the numbers one by one row-wise clearly without breaks.
+
 4.After reading the entire set of numbers, turn off the mic.
+
 5.Check if the numbers are placed in the respective squares, if not try again.
 
 # NOTE:
