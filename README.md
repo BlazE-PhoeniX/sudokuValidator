@@ -24,6 +24,9 @@ Do not stop, Continue the process, wrongly filled or unfilled numbers can be edi
 >>>> MANUAL TYPING
 
 1.Zoom in on the Square.
+
 2.Select the square to be edited or filled in with number.
+
 3.Type the correct number.
+
 4.PC users, Use TAB key to move through the squares swiftly.
