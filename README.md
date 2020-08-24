@@ -16,11 +16,6 @@ Simple minimalistic web app with voice transcription feature to validate Sudoku
 
 5.Check if the numbers are placed in the respective squares, if not try again.
 
-# NOTE:
-
-Voice transcription feature is in beta, hence the numbers can be filled only from start, So if something is read wrongly,
-Do not stop, Continue the process, wrongly filled or unfilled numbers can be edited manually.
-
 >>>> MANUAL TYPING
 
 1.Zoom in on the Square.
@@ -30,3 +25,9 @@ Do not stop, Continue the process, wrongly filled or unfilled numbers can be edi
 3.Type the correct number.
 
 4.PC users, Use TAB key to move through the squares swiftly.
+
+# NOTE:
+
+Voice transcription feature is in beta, hence the numbers can be filled only from start, So if something is read wrongly,
+
+Do not stop, Continue the process, wrongly filled or unfilled numbers can be edited manually.
