@@ -1,0 +1,54 @@
+* {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 50%;
+
+    @include breakpoint($md) {
+        font-size: 56.25%;
+    }
+
+    @include breakpoint($xl) {
+        font-size: 67.5%;
+    }
+
+    @include breakpoint($xxl) {
+        font-size: 75%;
+    }
+}
+
+body, button, input {
+    font-family: Roboto, sans-serif;
+    color: $color-black-secondary;
+}
+
+
+.main 
+{
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($md) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .table-box {
+            width: 40%;
+        }
+
+        .cta-buttons-group {
+            width: 30%;
+            justify-content: space-between;
+            align-self: stretch;
+
+            & > * {
+                margin: 0 !important;
+            }
+        }
+    }
+}

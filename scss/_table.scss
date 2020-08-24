@@ -1,0 +1,60 @@
+.table-box {
+    border-radius: 3px;
+    margin: 0 1.5rem 5rem;
+    background: $color-red-secondary;
+    padding: 5rem 0;
+    box-shadow: 0 1rem 4rem rgba($color-black-secondary, .3);
+    position: relative;
+    
+    @include breakpoint($sm) {
+        margin: 0 10rem 5rem;
+    }
+
+    @include breakpoint($md) {
+        margin: 0 1.5rem 5rem;
+    }
+}
+
+.table {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    border: 5px solid $color-black-secondary;
+    border-spacing: 0px;
+    line-height: 1;
+    vertical-align: middle;
+    table-layout: fixed;
+    border-collapse: collapse;
+    transition: visibility .5s;
+    box-shadow: 0 1rem 4rem rgba($color-black-secondary, .3), 0 0 0 5px $color-white-secondary;
+    
+    .cell {
+        border: 2px solid $color-black-secondary;
+        align-items: center;
+        
+        input {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            outline: none;
+            border:none;
+
+            // Chrome, Safari, Edge, Opera
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            // Firefox
+            -moz-appearance: textfield;
+        }
+    }
+
+    width: 90%;
+    
+    @include breakpoint($sm) {
+        width: 75%;
+    }
+}

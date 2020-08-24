@@ -1,0 +1,92 @@
+.cta-buttons-group {
+    margin: 0 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    
+    @include breakpoint($sm) {
+        margin: 0 10rem 5rem;
+    }
+    
+    @include breakpoint($md) {
+        gap: 5rem;
+        margin: 0 1.5rem 5rem;
+    }
+
+    .sizeSet{
+        option {
+            background: $color-white-primary;
+            color: $color-red-secondary;
+        }
+    }
+}
+
+.filled-button {
+    margin-bottom: 5rem;
+    padding: 1.5rem 4rem;
+    font-size: 2rem;
+    background: $color-red-secondary;
+    color: $color-white-primary;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+
+    &:hover {
+        background: $color-red-primary;
+    }
+}
+
+.outline-button {
+    padding: 1.5rem 4rem;
+    color: $color-red-secondary;
+    font-size: 2rem;
+    background: $color-white-primary;
+    border-radius: 3px;
+    border: 2px solid $color-red-secondary;
+    outline: none;
+    
+    &:hover {
+        background: $color-red-secondary;
+        color: $color-white-primary;
+    }
+    
+    &--success {
+        color: $color-green-success;
+        border: 2px solid $color-green-success;
+        
+        &:hover {
+            background: $color-green-success;
+        }
+    }
+}
+
+.voice-box {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border: 2px solid $color-red-secondary;
+    border-radius: 3px;
+    margin-bottom: 5rem;
+    align-items: center;
+    justify-content: center;
+    
+    @include breakpoint($md) {
+        flex-grow: 1;
+        margin: 1rem 0;
+    }
+}
+
+.voice-button {
+    box-shadow: 0 1.5rem 3rem rgba(#000, .15);
+    margin-bottom: 5rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background: $color-red-secondary;
+    color: $color-white-primary;
+
+    i {
+        font-size: 5rem;
+    }
+}

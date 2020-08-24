@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Validator</title>
+
+    <!--custom stylesheets-->
+    <link rel="stylesheet" href="css/style-minified.css">
+
+</head>
+<body>
+    <div class="splash-screen">
+        <div class="splash-screen-box">
+            <h1>Sudoku</h1>
+            <h2>Validator</h2>
+        </div>
+        <div class="progress-bar"></div>
+    </div>
+
+    <div class="getSize-bg">
+        <div class="getSize-box">
+            <h2 class="getSize-text">Select the Size</h2>
+            <div class="getSize-button-group">
+                <button class="getSize-button" onclick="createTable(3)">3</button>
+                <button class="getSize-button" onclick="createTable(6)">6</button>
+                <button class="getSize-button" onclick="createTable(9)">9</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <h1>Sudoku <span>V</span>alidator</h1>
+    </header>
+
+    <main class="main">
+        <div class="table-box">
+            <table class="table">
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="cta-buttons-group">
+            <select class="sizeSet filled-button" oninput="createTable(this.value)">
+                <option value="3">Three</option>
+                <option value="6">Six</option>
+                <option value="9">Nine</option>
+            </select>
+            <div class="voice-box">
+                <button class="voice-button" onclick="startRec()"><i class="fa fa-microphone"></i></button>
+                <button class="outline-button" onclick="showPopUp('instructions')">INSTRUCTIONS</button>
+            </div>
+            <button class="filled-button" onclick="validateSudoku()">VALIDATE</button>
+        </div>
+    </main>
+
+    <div class="pop-up-bg"></div>
+
+    <div class="pop-up instructions">
+        <h2>Instructions</h2>
+        <h3>Using Voice Transcription</h3>
+        <ul>
+            <li>Turn on the mic.</li>
+            <li>Allow permission for mic to be used.</li>
+            <li>when you see the splash effect around the mic button, Read the numbers one by one row-wise clearly without breaks.</li>
+            <li>After reading the entire set of numbers, turn off the mic.</li>
+            <li>Check if the numbers are placed in the respective squares, if not try again.</li>
+        </ul>
+        <h3>Note:</h3>
+        <p>Voice transcription feature is in beta, hence the numbers can be filled only from start, So if something is read wrongly, <br>
+        <strong>Do not stop, Continue the process, wrongly filled or unfilled numbers can be edited manually.</strong></p>
+        <h3>Manual Typing</h3>
+        <ul>
+            <li>Zoom in on the Square.</li>
+            <li>Select the square to be edited or filled in with number.</li>
+            <li>Type the correct number.</li>
+            <li>PC users, Use TAB key to move through the squares swiftly.</li>    
+        </ul>
+        <button class="outline-button close-button" onclick="closePopUp('instructions')">Close</button>
+    </div>
+    
+    <div class="pop-up validate-success">
+        <p class="message">Validation successful</p>
+        <button class="outline-button close-button outline-button--success" onclick="closePopUp('validate-success')">Close</button>
+    </div>
+
+    <div class="pop-up validate-fail">
+        <p class="message">Validation failed</p>
+        <p class="error">Error at row 1</p>
+        <button class="outline-button close-button outline-button--fail" onclick="closePopUp('validate-fail')">Close</button>
+    </div>
+
+    <!--javascript-->
+    <script src="js/main.min.js"></script>
+</body>
+</html>

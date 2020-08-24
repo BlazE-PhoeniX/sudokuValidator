@@ -1,0 +1,26 @@
+.header {
+    font-family: 'Abril Fatface';
+    text-align: center;
+    margin: 1.5rem 1.5rem 5rem;
+    padding: 2rem 2rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+    h1 {
+        font-size: 4rem;
+        word-spacing: 1rem;
+        background: linear-gradient(to top, $color-red-tertiary, $color-red-secondary, $color-red-primary);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        span, &::first-letter {
+            font-size: 6rem;
+        }
+
+        span {
+            margin-right: -1rem;
+        }
+
+    }
+}

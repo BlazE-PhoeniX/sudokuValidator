@@ -1,0 +1,61 @@
+$color-red-dark:#BA265D;
+$color-red-primary: #eb2f64;
+$color-red-secondary: #FF3366;
+$color-red-tertiary: #ff6669;
+$color-red-light: #ffdbc5;
+
+$color-black-primary: #000;
+$color-black-secondary: #423144;
+
+$color-green-success: #43A047;
+
+
+$color-white-primary: #fff;
+$color-white-secondary: #ddd;
+
+$sm: 36em;
+$md: 48em;
+$lg: 62em;
+$xl: 75em;
+$xxl: 100em;
+
+
+@mixin breakpoint($bp) {
+    @media only screen and (min-width: $bp) {
+        @content;
+    }
+}
+
+@keyframes fillInFromLeft {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes micActive {
+    0% {
+        box-shadow: 0 0 0 1rem rgba($color-red-secondary, .35);
+    }
+    50% {
+        box-shadow: 0 0 0 3rem rgba($color-red-secondary, .35);
+    }
+    100% {
+        box-shadow: 0 0 0 1rem rgba($color-red-secondary, .35);
+    }
+
+}

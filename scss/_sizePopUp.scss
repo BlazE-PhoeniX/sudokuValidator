@@ -1,0 +1,34 @@
+.getSize-bg {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: $color-red-secondary;
+        display: flex;
+        z-index: 100;
+        justify-content: center;
+        align-items: center;
+        transition: transform .3s .2s;
+}
+
+.getSize-box {
+    text-align: center;
+    background: $color-white-primary;
+    padding: 4rem 3rem;
+    font-size: 3rem;
+    border: .5rem solid #000;
+    outline: 1rem solid $color-white-primary;
+}
+
+.getSize-button-group {
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+}
+
+.getSize-button {
+    font-size: 2rem;
+    flex-grow: 1;
+    padding: 1rem 4rem;
+}

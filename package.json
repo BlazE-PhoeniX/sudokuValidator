@@ -1,0 +1,27 @@
+{
+  "name": "sudoku_validator",
+  "version": "1.0.0",
+  "description": "Web app to validate all types of sudoku",
+  "main": "index.js",
+  "scripts": {
+    "live-server": "live-server",
+    "watch-sass": "sass --watch --no-source-map scss/style.scss:css/style.css",
+    "start": "npm-run-all --parallel live-server watch-sass",
+
+    "compile-sass": "sass --no-source-map scss/style.scss:css/style-compiled.css",
+    "concat-css": "concat -o css/style-concatenated.css css/font-awesome.min.css css/style-compiled.css",
+    "prefix-css": "postcss --use autoprefixer -b \"last 10 versions\" -o css/style-prefixed.css css/style-concatenated.css",
+    "minify-css": "sass --no-source-map css/style-prefixed.css:css/style-minified.css -s compressed",
+    "build": "npm-run-all compile-sass concat-css prefix-css minify-css"
+  },
+  "author": "Hariprasath",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.8.5",
+    "concat": "^1.0.3",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "sass": "^1.26.10"
+  }
+}
